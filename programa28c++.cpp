@@ -1,31 +1,29 @@
 #include <iostream>
-
-using namespace std;
+#include <string.h>
+using namespace std ;
 
 int main() {
-
-int n1, n2, res;
-
-cout << "Ingrese el primer número: ";
-
-cin >> n1;
-
-cout << "Ingrese el segundo número: ";
-
-cin >> n2;
-
-if (n1==0) {
-
-cout << "No es divisible porque es 0";
-
-} else if (n2==0) {
-
-cout << "No es divisible porque es ";
-
-}else if (n1 | n2 > 0) {
-
-res =n1/n2;
-
-cout << "El resultado de n1 entre n2 es: " << res;
-}
+    char nombreusuario[20];
+    char contra[20];
+    int intentosrestantes = 3;
+    int articulos;
+    int i;
+    int presio,tot;
+    
+    while (intentosrestantes > 0) {
+       cout<<"Nombre de usuario: ";
+       cin>> nombreusuario;
+       cout <<"Contraseña: ";
+        cin>>contra;
+        if (strcmp(nombreusuario, "AlejandroGM") == 0 && strcmp(contra, "2b9") == 0) {
+           cout<<"Bienvenido al sistema, "<< nombreusuario;
+           }else if (1){
+            cout<<"Nombre de usuario o contraseña incorrectos.\n";
+            intentosrestantes--; 
+            if (intentosrestantes > 0) {
+                cout<<" Te quedan "<<intentosrestantes<<" intentos restantes \n ";
+            }
+        }
+    }
+    cout<<"Has superado el número de intentos permitido.\n";
 }
